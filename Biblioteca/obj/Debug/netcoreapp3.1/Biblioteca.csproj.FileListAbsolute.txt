@@ -9,3 +9,6 @@ C:\Users\leona\source\repos\Biblioteca\Biblioteca\obj\Debug\netcoreapp3.1\Biblio
 C:\Users\leona\source\repos\Biblioteca\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.AssemblyInfo.cs
 C:\Users\leona\source\repos\Biblioteca\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.dll
 C:\Users\leona\source\repos\Biblioteca\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.pdb
+C:\Users\leona\source\repos\Biblioteca\Biblioteca\bin\Debug\netcoreapp3.1\Biblioteca.Model.dll
+C:\Users\leona\source\repos\Biblioteca\Biblioteca\bin\Debug\netcoreapp3.1\Biblioteca.Model.pdb
+C:\Users\leona\source\repos\Biblioteca\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.csproj.CopyComplete

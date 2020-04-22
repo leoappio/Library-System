@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "Biblioteca.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Biblioteca.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Biblioteca.Model.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Biblioteca.Model/1.0.0": {
+      "type": "project",
+      "path": "../Biblioteca.Model/Biblioteca.Model.csproj",
+      "msbuildProject": "../Biblioteca.Model/Biblioteca.Model.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "Biblioteca.Model >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\leona\\.nuget\\packages\\": {},
@@ -37,7 +56,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\leona\\source\\repos\\Biblioteca\\Biblioteca.Model\\Biblioteca.Model.csproj": {
+              "projectPath": "C:\\Users\\leona\\source\\repos\\Biblioteca\\Biblioteca.Model\\Biblioteca.Model.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

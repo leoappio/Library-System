@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Biblioteca.Entities
 {
-    class Library
+    public class Library
     {
         public List<Account> Contas { get; set; } = new List<Account>();
         public Dictionary<Book, int> livros { get; set; } = new Dictionary<Book, int>();
@@ -108,6 +108,66 @@ namespace Biblioteca.Entities
             }
 
             return null;
+        }
+
+
+        public bool ValidarConta(int accountNumber)
+        {
+            foreach(Account conta in Contas)
+            {
+                if (conta.ID == accountNumber)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public List<Book> GetBooksByAccount(int accountNumber)
+        {
+            foreach (Account conta in Contas)
+            {
+                if (conta.ID == accountNumber)
+                {
+                    return conta.Livros;
+                }
+            }
+
+            return null;
+        }
+
+
+        public bool ValidarEmprestimo(int accountNumber, int BookID)
+        {
+            foreach (Account conta in Contas)
+            {
+                if (conta.ID == accountNumber)
+                {
+                    foreach(Book livro in conta.Livros)
+                    {
+                        if (livro.Id == BookID)
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+
+            return false;
+        }
+
+
+        public void RemoverLivroConta(int accountNumber, int bookID)
+        {
+            foreach (Account conta in Contas)
+            {
+                if (conta.ID == accountNumber)
+                {
+                    conta.RemoverLivro(GetLivroByID(bookID));
+                }
+            }
+
         }
     }
 }

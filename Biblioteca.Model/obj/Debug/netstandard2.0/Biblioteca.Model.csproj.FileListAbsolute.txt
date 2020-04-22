@@ -1,0 +1,8 @@
+C:\Users\leona\source\repos\Biblioteca\Biblioteca.Model\bin\Debug\netstandard2.0\Biblioteca.Model.deps.json
+C:\Users\leona\source\repos\Biblioteca\Biblioteca.Model\bin\Debug\netstandard2.0\Biblioteca.Model.dll
+C:\Users\leona\source\repos\Biblioteca\Biblioteca.Model\bin\Debug\netstandard2.0\Biblioteca.Model.pdb
+C:\Users\leona\source\repos\Biblioteca\Biblioteca.Model\obj\Debug\netstandard2.0\Biblioteca.Model.csprojAssemblyReference.cache
+C:\Users\leona\source\repos\Biblioteca\Biblioteca.Model\obj\Debug\netstandard2.0\Biblioteca.Model.AssemblyInfoInputs.cache
+C:\Users\leona\source\repos\Biblioteca\Biblioteca.Model\obj\Debug\netstandard2.0\Biblioteca.Model.AssemblyInfo.cs
+C:\Users\leona\source\repos\Biblioteca\Biblioteca.Model\obj\Debug\netstandard2.0\Biblioteca.Model.dll
+C:\Users\leona\source\repos\Biblioteca\Biblioteca.Model\obj\Debug\netstandard2.0\Biblioteca.Model.pdb
