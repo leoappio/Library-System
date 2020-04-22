@@ -70,7 +70,34 @@ namespace Biblioteca
 
                     break;
                 case 2:
-                    Emprestimo();
+
+                    Console.WriteLine("digite o numero da conta de quem quer pegar emprestado");
+                    int numeroConta = int.Parse(Console.ReadLine());
+
+                    if (library.ValidarConta(numeroConta))
+                    {
+                        Console.WriteLine("digite o id do livro que deseja pegar emprestado");
+                        int bookID = int.Parse(Console.ReadLine());
+
+                        if(library.QuantidadeDisponivel(bookID) > 0)
+                        {
+                            library.AlugarLivro(library.GetLivroByID(bookID));
+                            library.AdicionarLivroConta(numeroConta, bookID);
+                            Console.WriteLine("livro foi alugado com sucesso");
+                            PressAnyKey();
+                        }
+                        else
+                        {
+                            PressAnyKey();
+                            Console.WriteLine("este livro não está disponível");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("conta não encontrada");
+                        PressAnyKey();
+                    }
+
                     break;
                 case 3:
                     CriarConta();
@@ -80,54 +107,6 @@ namespace Biblioteca
                     break;
             }
         }
-
-        public void Emprestimo()
-        {
-
-            Console.WriteLine("digite o numero da conta de quem quer pegar emprestado");
-            int accountNumber = int.Parse(Console.ReadLine());
-
-            Account conta = library.GetConta(accountNumber);
-
-            if (conta.Nome != null)
-            {
-                Console.WriteLine($"digite o id do livro que {conta.Nome} deseja pegar emprestado");
-                int bookID = int.Parse(Console.ReadLine());
-
-                int quantidade = library.QuantidadeDisponivel(bookID);
-
-                if (quantidade != -1)
-                {
-                    if (quantidade > 0)
-                    {
-                        Book livro = library.GetLivroByID(bookID);
-
-                        library.AlugarLivro(livro);
-
-                        conta.AddLivro(livro);
-
-                        Console.WriteLine($"O livro {bookID} foi alugado para {conta.Nome}, restam {library.QuantidadeDisponivel(bookID)} unidades");
-                        PressAnyKey();
-                    }
-                    else
-                    {
-                        Console.WriteLine($"todas as unidades do livro {bookID} estão alugadas");
-                        PressAnyKey();
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("livro não encontrado");
-                    PressAnyKey();
-                }
-            }
-            else
-            {
-                Console.WriteLine("conta não encontrada");
-                PressAnyKey();
-            }
-        }
-
 
         public void CriarConta()
         {

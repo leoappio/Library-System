@@ -169,5 +169,17 @@ namespace Biblioteca.Entities
             }
 
         }
+
+        public void AdicionarLivroConta(int accountNumber, int bookID)
+        {
+            foreach (Account conta in Contas)
+            {
+                if (conta.ID == accountNumber)
+                {
+                    conta.AddLivro(GetLivroByID(bookID));
+                }
+            }
+
+        }
     }
 }
