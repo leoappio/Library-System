@@ -90,22 +90,6 @@ namespace Biblioteca.Entities
             livros.Add(livro, quantidade);
         }
 
-
-
-        public Account GetConta(int ID)
-        {
-            for(int i = 0; i < Contas.Count; i++)
-            {
-                if(Contas[i].ID == ID)
-                {
-                    return Contas[i];
-                }
-            }
-
-            return null;
-        }
-
-
         public bool ValidarConta(int accountNumber)
         {
             foreach(Account conta in Contas)
