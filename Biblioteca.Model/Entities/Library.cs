@@ -13,20 +13,15 @@ namespace Biblioteca.Entities
         {
         }
 
-
         public void addAccount(Account account)
         {
             Contas.Add(account);
-
         }
-
 
         public void AddLivro(Book livro, int quantidade)
         {
             livros.Add(livro, quantidade);
         }
-
-
 
         public int QuantidadeDisponivel(int id)
         {
