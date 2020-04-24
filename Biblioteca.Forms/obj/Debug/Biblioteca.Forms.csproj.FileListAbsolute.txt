@@ -1,0 +1,12 @@
+C:\Users\leona\source\repos\Biblioteca\Biblioteca.Forms\bin\Debug\Biblioteca.Forms.exe.config
+C:\Users\leona\source\repos\Biblioteca\Biblioteca.Forms\bin\Debug\Biblioteca.Forms.exe
+C:\Users\leona\source\repos\Biblioteca\Biblioteca.Forms\bin\Debug\Biblioteca.Forms.pdb
+C:\Users\leona\source\repos\Biblioteca\Biblioteca.Forms\bin\Debug\Biblioteca.Model.dll
+C:\Users\leona\source\repos\Biblioteca\Biblioteca.Forms\bin\Debug\Biblioteca.Model.pdb
+C:\Users\leona\source\repos\Biblioteca\Biblioteca.Forms\obj\Debug\Biblioteca.Forms.csprojAssemblyReference.cache
+C:\Users\leona\source\repos\Biblioteca\Biblioteca.Forms\obj\Debug\Biblioteca.Forms.Form1.resources
+C:\Users\leona\source\repos\Biblioteca\Biblioteca.Forms\obj\Debug\Biblioteca.Forms.Properties.Resources.resources
+C:\Users\leona\source\repos\Biblioteca\Biblioteca.Forms\obj\Debug\Biblioteca.Forms.csproj.GenerateResource.cache
+C:\Users\leona\source\repos\Biblioteca\Biblioteca.Forms\obj\Debug\Biblioteca.Forms.csproj.CopyComplete
+C:\Users\leona\source\repos\Biblioteca\Biblioteca.Forms\obj\Debug\Biblioteca.Forms.exe
+C:\Users\leona\source\repos\Biblioteca\Biblioteca.Forms\obj\Debug\Biblioteca.Forms.pdb

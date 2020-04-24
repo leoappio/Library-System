@@ -2,22 +2,22 @@
 using Biblioteca.Entities;
 using System.Collections.Generic;
 
+
 namespace Biblioteca
 {
     class Program
     {
-        Library library = new Library();
+        public static Library library = new Library();
 
         static void Main(string[] args)
         {
-            Program programa = new Program();
-            programa.InstantiateBooks();
-            programa.Menu();
+            library.InstantiateBooks();
+            
+            //programa.Menu();
             Console.ReadLine();
         }
 
-
-        public void Menu()
+        public static void Menu()
         {
             Console.Clear();
             Console.WriteLine("[1] Devolução ");
@@ -66,9 +66,8 @@ namespace Biblioteca
                         Console.WriteLine("conta não encontrada");
                         PressAnyKey();
                     }
-
-
                     break;
+
                 case 2:
 
                     Console.WriteLine("digite o numero da conta de quem quer pegar emprestado");
@@ -78,6 +77,7 @@ namespace Biblioteca
                     {
                         Console.WriteLine("digite o id do livro que deseja pegar emprestado");
                         int bookID = int.Parse(Console.ReadLine());
+
 
                         if(library.QuantidadeDisponivel(bookID) > 0)
                         {
@@ -97,62 +97,38 @@ namespace Biblioteca
                         Console.WriteLine("conta não encontrada");
                         PressAnyKey();
                     }
-
                     break;
+
                 case 3:
                     CriarConta();
                     break;
+
                 default:
                     Console.WriteLine("erro");
                     break;
             }
         }
 
-        public void CriarConta()
+
+        public static void CriarConta()
         {
 
             Console.Write("Qual o seu nome?");
             string nome = Console.ReadLine();
 
-            int id = GenerateId();
-
-            Account account = new Account(id, nome);
+            Account account = new Account(nome);
             library.addAccount(account);
 
 
-            Console.WriteLine("id da conta " + id);
+            Console.WriteLine("id da conta " + account.ID);
             PressAnyKey();
         }
 
 
-        public int GenerateId()
-        {
-            Random rdn = new Random();
-            int id_base = rdn.Next(100, 999);
-            int id_multiplier = rdn.Next(2, 20);
-
-            int id = id_base * id_multiplier;
-            return id;
-        }
-
-        public void InstantiateBooks()
-        {
-            Book livro1 = new Book(1234, "Book 1", "writer 1");
-            Book livro2 = new Book(1235, "Book 2", "writer 1");
-            Book livro3 = new Book(1236, "Book 3", "writer 3");
-            Book livro4 = new Book(1237, "Book 4", "writer 5");
-            Book livro5 = new Book(1238, "Book 5", "writer 7");
-
-            library.AddLivro(livro1, 3);
-            library.AddLivro(livro2, 1);
-            library.AddLivro(livro3, 2);
-            library.AddLivro(livro4, 5);
-            library.AddLivro(livro5, 4);
-
-        }
 
 
-        public void PressAnyKey()
+
+        public static void PressAnyKey()
         {
             Console.WriteLine("Press any key");
             Console.ReadKey();

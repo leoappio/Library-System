@@ -13,6 +13,22 @@ namespace Biblioteca.Entities
         {
         }
 
+        public void InstantiateBooks()
+        {
+            Book livro1 = new Book(1234, "Book 1", "writer 1");
+            Book livro2 = new Book(1235, "Book 2", "writer 1");
+            Book livro3 = new Book(1236, "Book 3", "writer 3");
+            Book livro4 = new Book(1237, "Book 4", "writer 5");
+            Book livro5 = new Book(1238, "Book 5", "writer 7");
+
+            AddLivro(livro1, 3);
+            AddLivro(livro2, 1);
+            AddLivro(livro3, 2);
+            AddLivro(livro4, 5);
+            AddLivro(livro5, 4);
+
+        }
+
         public void addAccount(Account account)
         {
             Contas.Add(account);
